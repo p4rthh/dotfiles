@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- ==========================================================================
--- 2. BASIC SETTINGS (Making it behave nicely)
+-- 2. BASIC SETTINGS
 -- ==========================================================================
 vim.g.mapleader = " "          -- Sets the "Leader" key to Space (crucial for shortcuts)
 vim.opt.number = true          -- Show line numbers
@@ -25,7 +25,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- ==========================================================================
--- 3. PLUGINS (The "Cool" Stuff)
+-- 3. PLUGINS
 -- ==========================================================================
 require("lazy").setup({
   -- FORMATTING: Conform.nvim
@@ -59,7 +59,6 @@ require("lazy").setup({
   },
 
   -- THEME: Catppuccin/Mocha
-  -- FEATURE: Just a color scheme setup
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -78,9 +77,6 @@ require("lazy").setup({
     end,
   },
 
-  -- STATUS BAR: Lualine
-  -- FEATURE: Replaces the boring bottom bar with a colorful, icon-rich status line.
-  -- It shows your git branch, file type, and current mode.
   -- STATUS BAR: Lualine
   {
     "nvim-lualine/lualine.nvim",
@@ -106,8 +102,7 @@ require("lazy").setup({
     },
   },
 
-  -- FUZZY FINDER: Telescope
-  -- FEATURE: The "Google Search" of your code. Find files instantly without browsing folders.
+  -- Telescope
   -- USAGE: 
   --   Space + f + f : Find File
   --   Space + f + g : Find Text (Grep) inside files
@@ -129,9 +124,8 @@ require("lazy").setup({
     build = ":TSUpdate"
   },
 
-  -- CHEATSHEET: Which-Key
+  -- Which-Key
   -- FEATURE: If you press "Space" and wait, a menu pops up showing you all available commands.
-  -- You never have to memorize shortcuts again.
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
